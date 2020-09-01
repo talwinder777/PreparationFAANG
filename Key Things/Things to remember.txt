@@ -1,0 +1,28 @@
+
+when writing custom comparato on map, in overriding the compare method string are compared with compareTo method and interger are compared by substracting
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+How does Collections.Sort() work? 
+Internally the Sort method does call Compare method of the classes it is sorting. To compare two elements, it asks “Which is greater?” Compare method returns -1, 0 or 1 to say if it is less than, equal, or greater to the other. It uses this result to then determine if they should be swapped for its sort.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Character.isDigit, isAlphanumeric to check if digit or alphanumeric
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+in priority queue if you want to have top k most occuring elements then maintain a min heap so that you always remove the min element after
+adding the k elements
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+// 1). replace the punctuations with spaces,
+        // and put all letters in lower case
+        String normalizedStr = paragraph.replaceAll("[^a-zA-Z0-9 ]", " ").toLowerCase();
+
+        // 2). split the string into words
+        String[] words = normalizedStr.split("\\s+");
+-------------------------------------------------------------------------------------------------------------------------------------------
+
