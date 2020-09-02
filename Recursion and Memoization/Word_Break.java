@@ -1,5 +1,6 @@
 
-//recursive solution without memoization O(n^n)
+//recursive solution without memoization 
+//time Complexity - 2^n for reference move to "https://leetcode.com/problems/word-break/discuss/169383/The-Time-Complexity-of-The-Brute-Force-Method-Should-Be-O(2n)-and-Prove-It-Below"
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
         
