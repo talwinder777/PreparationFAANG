@@ -1,0 +1,36 @@
+public class MyClass {
+    public static void main(String args[]) {
+      int n = 2, m = 1, k = 3;
+      
+      int mem[][] = new int[k + 1][n + 1];
+      
+      int ans = dp(k, n, 0, mem, m);
+      System.out.println("ans --- "+ans);
+      System.out.println("paw "+Math.pow(m+1, k));
+      System.out.println("ans = "+ ((ans / Math.pow(m+1,k)) * 100));
+    }
+    
+    public static int dp (int k, int target, int sum, int[][] mem, int m) {
+        
+        if(k == 0 && target != 0)
+            return 0;
+        // if(k == 0 && target == 0){
+        //     System.out.println("inside");
+        //     return 1;
+        // }
+        if (target <= 0) {
+            return 1;
+        }
+        
+        if(mem[k][target] != 0) {
+            return mem[k][target];
+        }
+        
+        for (int i = 0; i <= m; i++) {
+            sum += dp(k-1, target - i, sum, mem, m);
+        }
+        
+        mem[k][target] = sum;
+        return sum;
+    }
+}
